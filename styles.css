@@ -133,7 +133,7 @@ body, html {
 
 /* Pembatas antara konten utama dan page tambahan */
 .additional-page {
-    background-image: url('lari.jpg'); /* Ganti dengan URL gambar pilihan Anda */
+    background-image: url('backg1.jpg'); /* Ganti dengan URL gambar pilihan Anda */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -271,7 +271,7 @@ body, html {
 
 /* Mengubah background hanya di area tombol */
 .tips-menu-container {
-    background-image: url('lari.jpg'); /* Ganti dengan path gambar Anda */
+    background-image: url('backg22.jpg'); /* Ganti dengan path gambar Anda */
     background-size: cover;          /* Gambar akan menutupi area tombol */
     background-repeat: no-repeat;    /* Tidak mengulangi gambar */
     background-position: center;     /* Memusatkan gambar */
