@@ -1,0 +1,359 @@
+/* Reset dan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden; /* Only hide horizontal overflow to prevent cutting off elements */
+}
+
+/* Container utama */
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+}
+
+/* Wrapper untuk background slider */
+.background-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Background slider */
+.backgrounds {
+    display: flex;
+    transition: transform 1s ease;
+    height: 100%;
+}
+
+.background {
+    min-width: 100%;
+    height: 100%;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Konten di tengah */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content p {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.deskripsi-web {
+    margin-top: 40px; /* Menambahkan jarak atas untuk memisahkan dari .container */
+    margin-bottom: 30px; /* Menambahkan jarak bawah sebelum menu */
+    text-align: center;
+    font-size: 1.2em;
+    color: #555; /* Warna teks agar berbeda dari menu */
+}
+
+/* Deskripsi dan Menu Bawah */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Set exactly 3 columns */
+    gap: 20px;
+    width: 50%;
+    max-width: 1000px;
+    margin: 25px auto;
+    z-index: 2;
+}
+
+.menu-item {
+    background-color: #64a796;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+.menu-item a {
+    display: flex; /* Atur ikon dan teks secara horizontal */
+    align-items: center; /* Pastikan ikon dan teks sejajar secara vertikal */
+    text-decoration: none;
+    color: white;
+}
+
+.menu-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px; /* Jarak antara ikon dan teks */
+}
+
+.menu-item div {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Pembatas antara konten utama dan page tambahan */
+.additional-page {
+    background-image: url('lari.jpg'); /* Ganti dengan URL gambar pilihan Anda */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Overlay gelap di atas background */
+.additional-page .overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* 90% gelap */
+    padding: 40px;
+    border-radius: 8px;
+}
+
+/* Judul di halaman tambahan */
+.additional-page h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #f2f2f2;
+}
+
+/* Grid untuk tombol menu */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    gap: 20px;
+    justify-content: flex-start; /* Memulai dari kiri */
+}
+
+/* Tombol menu dengan gaya mirip */
+.menu-grid .menu-item {
+    background-color: #64a796;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+.menu-grid .menu-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.menu-grid .menu-item:hover {
+    background-color: #52917e; /* Warna lebih gelap saat hover */
+}
+
+/* Pembatas antara container utama dan page */
+.deskripsi-web + .additional-page {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #ddd;
+}
+
+/* Typing animation styles */
+.typing-container {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    min-height: 50px;
+    text-align: center;
+}
+
+#typing-text {
+    display: inline-block;
+    border-right: 3px solid #333;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+    width: 0;
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.content-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styling untuk halaman tambahan dan animasi mengetik */
+.typing-page {
+    margin-top: 40px; /* Menambah jarak antara grid menu dan animasi teks */
+    padding: 30px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Biarkan kontainer mengisi seluruh lebar */
+    margin: 20px auto;
+    text-align: center;
+    word-wrap: break-word; /* Membungkus kata yang terlalu panjang */
+}
+
+.typing-container {
+    font-size: 2.5vw; /* Ukuran font responsif berdasarkan lebar layar */
+    color: #333;
+    font-weight: bold;
+    line-height: 1.5;
+    min-height: 50px;
+    white-space: normal; /* Biarkan teks melanjutkan ke baris berikutnya */
+    font-family: 'Courier New', monospace;
+    width: 100%; /* Lebar kontainer mengikuti lebar halaman */
+    overflow: hidden; /* Menghindari teks melampaui kontainer */
+}
+
+#typing-text {
+    display: inline-block;
+    border-right: 3px solid #333;
+    padding-right: 5px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Menambahkan gaya untuk fade-out */
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Mengubah background hanya di area tombol */
+.tips-menu-container {
+    background-image: url('lari.jpg'); /* Ganti dengan path gambar Anda */
+    background-size: cover;          /* Gambar akan menutupi area tombol */
+    background-repeat: no-repeat;    /* Tidak mengulangi gambar */
+    background-position: center;     /* Memusatkan gambar */
+    padding: 20px;                   /* Memberikan jarak agar gambar tidak terlalu dekat dengan tombol */
+    border-radius: 10px;             /* Menambahkan sudut membulat jika diperlukan */
+}
+
+/* Menu Container Tips */
+.tips-menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Menyelaraskan tinggi kolom kiri dan kanan */
+    margin-top: 20px;
+}
+
+/* Kolom Kiri (4 Tombol) */
+.tips-column-left {
+    width: 25%; /* 25% dari lebar container */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Kolom Kanan (2 Tombol B) */
+.tips-column-right {
+    width: 75%; /* 75% dari lebar container */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Gaya untuk setiap tombol */
+.tips-menu-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Background tombol sesuai kategori */
+.tips-menu-button.default {
+    background-color: #3498db;
+}
+
+.tips-menu-button.secondary {
+    background-color: #2ecc71;
+}
+
+.tips-menu-button.tertiary {
+    background-color: #f39c12;
+}
+
+.tips-menu-button.quaternary {
+    background-color: #e74c3c;
+}
+
+/* Tombol B (Kolom Kanan) */
+.tips-menu-button.b-button {
+    background-color: #8e44ad;
+    height: calc(100% / 2 - 5px); /* Membuat setiap tombol B mengisi tinggi kolom kanan secara merata dan setara dengan dua tombol A */
+}
+
+/* Efek saat tombol di-hover */
+.tips-menu-button:hover {
+    opacity: 0.8;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 600px) {
+    .tips-column-left,
+    .tips-column-right {
+        width: 100%;
+    }
+
+    .tips-menu-button {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
