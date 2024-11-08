@@ -336,7 +336,7 @@ body, html {
 
 /* Tombol B (Kolom Kanan) */
 .tips-menu-button.b-button {
-    background-color: #8e44ad;
+    background-color: #9f7cad;
     height: calc(100% / 2 - 5px); /* Membuat setiap tombol B mengisi tinggi kolom kanan secara merata dan setara dengan dua tombol A */
 }
 
@@ -356,4 +356,56 @@ body, html {
         font-size: 1em;
         padding: 12px;
     }
+}
+
+footer {
+    background-color: #333;
+    color: #f7f8fa;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+.footer-section h3 {
+    color: #ff8c00;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.footer-section p, .footer-section a {
+    color: #f7f8fa;
+    line-height: 1.6;
+    text-decoration: none;
+}
+.footer-section a:hover {
+    color: #ff8c00;
+}
+.social-icons {
+    margin-top: 10px;
+}
+.social-icons a {
+    color: #f7f8fa;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #ff8c00;
+}
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
 }
