@@ -336,7 +336,7 @@ body, html {
 
 /* Tombol B (Kolom Kanan) */
 .tips-menu-button.b-button {
-    background-color: #226b55;
+    background-color: #589b8a;
     height: calc(100% / 2 - 5px); /* Membuat setiap tombol B mengisi tinggi kolom kanan secara merata dan setara dengan dua tombol A */
 }
 
