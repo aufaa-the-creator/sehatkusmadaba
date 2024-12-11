@@ -91,14 +91,7 @@ body, html {
     font-size: 1.2em;
     color: #555; /* Warna teks agar berbeda dari menu */
 }
-@font-face {
-    font-family: 'Mirisch';
-    src: url('../MIRISCH.TTF') format('truetype'); /* Sesuaikan dengan format file */
-}
 
-.deskripsi-web p {
-    font-family: 'Mirisch', sans-serif;
-}
 /* Deskripsi dan Menu Bawah */
 .menu-container {
     display: grid;
